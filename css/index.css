@@ -1,0 +1,57 @@
+*{
+	margin: 0 auto;
+	padding: 0px;
+}
+.title{
+	width: 1024px;
+	height: 170px;
+	background-color: black;
+	color: white;
+	font-size: 70px;
+	font-style:initial;
+	letter-spacing: 30px;
+	text-align: center;
+	line-height: 160px;
+}
+.down-title{
+	width: 1024px;
+	height: 10px;
+	background-color: black;}
+.body{
+	width: 1004px;
+	height: 400px;
+	background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 10px solid black;
+    border-left: 10px solid black;
+	
+}	
+.inbody{
+	width: 206px;
+	height: 360px;
+	background-color:white ;
+	
+}	
+.neibu{
+	width: 200px;
+	height: 150px;
+	background-color:  black;
+	margin-top: 15px;
+	font-size: 20px;
+	line-height: 150px;
+	text-align: center;
+}
+.neibu a{
+	text-decoration: none;
+	color: white;
+}
+.dibu{
+	width: 1024px;
+	height: 70px;
+	background-color: black;
+	color: white;
+	text-align: center;
+	line-height: 30px;
+}

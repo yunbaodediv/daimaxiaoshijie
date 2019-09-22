@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>四种常见布局</title>
+		<link rel="stylesheet" href="css/sizhongchangjianbujv.css" />
+	</head>
+	<body>
+		<div>
+		<div class="title"><h3>四种常见的布局</h3></div>
+			<div class="body">
+				<div class="one">
+					<h4>1.浮动布局</h4>
+					<ul>
+						<ol>float:left; 左浮动 浮动元素脱离文档流，原先位置不保留</ol>
+						<ol>float:right; 右浮动</ol>
+						<ol>clear: both; 清除浮动 清除兄弟元素的浮动影响</ol>
+						<ol>overflow:hidden; 清除浮动，清除浮动 清除子元素的浮动对父元素产生的影响</ol>
+					</ul>
+					<h4>示例：</h4>
+<div class="em-one">原来1</div>
+<div class="em-two">原来2</div>
+<div class="bian-one">让“原来1”向右浮动</div>
+<div class="em-one-one">原来1</div>
+<div class="em-two">原来2</div>
+<div class="bian-one">清除兄弟元素的影响div>
+<div class="em-one-one">原来1</div>
+<div class="em-two-two">原来2</div>	
+				</div>
+				<div class="two">
+					<h4>2.相对布局</h4>
+					静态定位 position:static; 默认的文档流的位置(HTML元素的默认值，即没有定位，元素出现在正常的流中。
+
+静态定位的元素不会受到top, bottom, left, right影响。)<br/><br/>
+					
+相对定位 position:relative; 相对于原来的位置进行定位<br/>
+原先位置保留，不脱离文档流<br/><br/>
+<h4>示例：</h4>
+<div class="x-one">原来1</div>
+<div class="x-two">原来2</div>
+<div class="x-three">原来3</div>
+<div class="bian-one">将原来二相对定位</div>
+<div class="x-one">原来1</div>
+<div class="x-two-two">原来2</div>
+<div class="x-three">原来3</div>
+绝对定位 position:absolute;<br/>
+如果有定位的祖先元素，相对于离它最近的祖先元素定位<br/>
+有祖先定位元素的绝对定位：为绝对定位元素的父元素设定"position:relative"可<br/>
+以将这个父元素变为当前绝对定位元素的父元素。<br/>
+如果没有定位的祖先元素，则相对于视口区的左上角定位<br/>
+原先位置不保留，脱离文档流<br/><br/>
+<h4>示例：</h4>
+<div class="x-one">原来1</div>
+<div class="x-two">原来2</div>
+<div class="x-three">原来3</div>
+<div class="fuqin">
+<div class="bian-one">将原来2绝对定位</div>
+<div class="x-one">原来1</div>
+<div class="x-two-two-two">原来2</div>
+<div class="x-three">原来3</div>
+</div>
+固定定位 position:fixed;<br/>
+定在浏览器（视口区）的某个位置上<br/>
+原先位置不保留，脱离文档流<br/>
+定位元素：使用相对定位、绝对定位、固定定位，定位的元素<br/>
+定位元素才可以使用以下属性：left right top bottom<br/><br/>
+<h4>示例：</h4>
+<div class="x-one">原来1</div>
+<div class="x-two">原来2</div>
+<div class="x-three">原来3</div>
+<div class="fuqin">
+<div class="bian-one">将原来2绝对定位</div>
+<div class="x-one">原来1</div>
+<div class="xx-two-two-two">原来2</div>
+<div class="x-three">原来3</div>
+</div>
+z-index 当两个绝对定位元素叠加在一起的时候，可以使用“z-index”来改变两个绝对定位元素出现<br/>
+的顺序（ z-index 取值无需指定单位，值大的显示在上方。 ）<br/>
+	
+				</div>
+<div class="three">
+	<h4>3.弹性布局</h4>
+flex-direction: row; 默认的，列布局<br/>
+flex-direction: column; 行布局<br/>
+flex-direction: row-reverse; 列布局的反转<br/>
+flex-direction: column-reverse; 行布局的反转<br/><br/>
+
+主轴对齐方式<br/>
+justify-content: flex-start; 默认的 从主轴的起点对齐<br/>
+justify-content: flex-end; 主轴的终点对齐<br/>
+justify-content: center; 项目在主轴上居中对齐<br/>
+justify-content: space-between; 项目在主轴上，项目与项目之间有空间<br/>
+justify-content: space-around; 项目四周有空间<br/><br/>
+
+交叉轴上的对齐方式<br/>
+align-items: flex-start; 默认 交叉轴的起点对齐<br/>
+align-items: flex-end; 交叉轴的终点对齐<br/>
+align-items: center; 垂直居中<br/>
+align-items: stretch; 如果项目没有设置高度将会占满整个容器的高度，默认的对齐方式<br/>
+align-items: baseline; 基准线对齐 项目内部的文本对齐<br/><br/>
+
+换行 flex-wrap: wrap;<br/>
+项目多了一个主轴放不下，可以换行显示<br/>
+flex-flow: flex-direction flex-wrap<br/>
+flex-flow: row wrap;<br/><br/>
+
+多主轴在交叉轴上的对齐方式 如果只有一根主轴，该属性不起作用<br/>
+align-content: flex-start;<br/>
+align-content: flex-end;<br/>
+align-content: center;<br/>
+align-content: space-around;<br/>
+align-content: space-between;<br/>
+align-content: stretch;<br/><br/>
+
+等比例划分 flex: 1;占满父元素剩余空间。<br/><br/>
+
+至小占据主轴上的空间 flex-basis: 200px;<br/>
+flex: 200px 1;表示先分200px,再和其他的进行等比例划分<br/><br/>
+
+	
+</div>			
+<div class="fore">
+	<h4>4.表格布局</h4>
+
+</div>				
+				
+				
+				
+				
+			
+			</div>	
+			
+			</div>
+			<div class="dibu">
+				<a href="index.html">返回首页</a>||
+				<a href="css-two.html">回到上一页</a>
+				<br/>
+				月月的小世界
+			
+			
+			
+			
+			
+			
+		</div>
+	</body>
+</html>
